@@ -1,0 +1,23 @@
+{
+  "name": "cracowbars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmkdudek/cracow-bars.git"
+  },
+  "keywords": [
+    "cracow",
+    "bars"
+  ],
+  "author": "tmkdudek@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmkdudek/cracow-bars/issues"
+  },
+  "homepage": "https://github.com/tmkdudek/cracow-bars#readme"
+}
