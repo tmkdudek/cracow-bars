@@ -1,1 +1,1 @@
-console.log('dziala');
+console.log('dzialaaaawda');
