@@ -1,13 +1,11 @@
 
 var PlacesSource      = require('./lib/PlacesSource'),
     BarsBrowser       = require('./lib/BarsBrowser'),
-    cache             = require('./lib/Cache'),
     restify           = require('restify');
 
 
 var placesSource      = new PlacesSource();
     manager          = new BarsBrowser({
-        'cache'      : cache,
         'places'     : placesSource
     });
 
