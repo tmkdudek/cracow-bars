@@ -13,6 +13,7 @@ module.exports = function( config ){
                 .then( function( rawPlaces ) {
 
                     var bars = [];
+
                     rawPlaces.forEach( function( place ) {
                         bars.push(new Bar({
                             id : place.place_id,
@@ -22,6 +23,7 @@ module.exports = function( config ){
                             photos : place.photos
                         }));
                     });
+
                     callback ( null, bars );
 
                 });
