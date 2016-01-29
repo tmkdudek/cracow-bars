@@ -1,0 +1,29 @@
+{
+  "name": "cracowbars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jasmine-node tests/ --verbose",
+    "start" : "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmkdudek/cracow-bars.git"
+  },
+  "keywords": [
+    "cracow",
+    "bars"
+  ],
+  "author": "tmkdudek@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmkdudek/cracow-bars/issues"
+  },
+  "dependencies" :{
+    "googleplaces-promises" : "1.0.0",
+    "node-promise" : "0.5.12",
+    "restify"   : "4.0.3"
+  },
+  "homepage": "https://github.com/tmkdudek/cracow-bars#readme"
+}
