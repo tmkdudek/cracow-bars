@@ -55,9 +55,19 @@ describe('BarBrowser',function(){
 
     it('getBar should return detail of bar if exist',function(done) {
 
-        spyOn(placesSource, 'getPlaces').andReturn(promise);
+        spyOn(placesSource, 'getPlaceDetail').andReturn(promise);
 
-        done();
+        barBrowser.getBar('fakei12adasd',function( err, barDetail ) {
+
+            expect(barDetail.id).toBe('fakei12adasd');
+            expect(barDetail.name).toBe('Example bar');
+            expect(barDetail.opening).toEqual( { open_now: false, weekday_text: [] });
+            expect(barDetail.rating).toBe( 4.2 );
+            expect(barDetail.isOpenNow()).toBe(false);
+            done();
+        });
+        promise.resolve(require('./fakeBarDetail.js').result);
+
 
 
     });
