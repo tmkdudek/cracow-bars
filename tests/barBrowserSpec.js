@@ -69,6 +69,18 @@ describe('BarBrowser',function(){
         promise.resolve(require('./fakeBarDetail.js').result);
 
 
+    });
+
+    it('getBar should return false if bar doesnot exist',function(done) {
+
+        spyOn(placesSource, 'getPlaceDetail').andReturn(promise);
+
+        barBrowser.getBar('fakei12adasd',function( err, barDetail ) {
+
+            expect(barDetail).toBeFalsy();
+            done();
+        });
+        promise.resolve(undefined);
 
     });
 
