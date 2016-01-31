@@ -20,7 +20,9 @@ module.exports = function( config ){
                             name : place.name,
                             opening : place.opening_hours,
                             rating : place.rating,
-                            photos : place.photos
+                            photos : place.photos,
+                            types : place.types,
+                            icon : place.icon
                         }));
                     });
 
@@ -39,7 +41,10 @@ module.exports = function( config ){
                             name : place.name,
                             opening : place.opening_hours,
                             rating : place.rating,
-                            photos : place.photos
+                            photos : place.photos,
+                            address : place.formatted_address,
+                            phone : place.formatted_phone_number,
+                            reviews : place.reviews,
                         });
                     }
                     callback ( null, bar || false );

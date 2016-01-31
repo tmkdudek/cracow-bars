@@ -1,0 +1,27 @@
+html
+  head
+    meta(name='viewport', content='"width=device-width, initial-scale=1')
+    title= title
+    link(rel='stylesheet', href='/public/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='/public/css/bootstrap.min.css')
+  body
+    a(href='/') Wstecz
+    div(class='panel panel-default')
+        div(class='panel-heading')
+            h1= title
+        table(class='table table-stripped')
+            tr
+                td Adres
+                td= bar.address
+            tr
+                td Numer telefonu
+                td= bar.phone
+            tr
+                td Recenzje
+                td
+                    ul(class='list-group')
+                    each review in bar.reviews
+                        li(class='list-group-item')
+                            span(class='label label-success')= review.author_name
+                            span=review.text
+
