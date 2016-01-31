@@ -6,6 +6,8 @@ module.exports = (function(  ){
         this.opening = place.opening;
         this.rating = place.rating;
         this.photos = place.photos;
+        this.icon = place.icon;
+        this.types = place.types;
     };
     Bar.prototype.isOpenNow = function(){
         if( typeof this.opening != 'undefined' &&

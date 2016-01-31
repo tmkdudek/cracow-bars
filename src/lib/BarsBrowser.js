@@ -20,7 +20,9 @@ module.exports = function( config ){
                             name : place.name,
                             opening : place.opening_hours,
                             rating : place.rating,
-                            photos : place.photos
+                            photos : place.photos,
+                            types : place.types,
+                            icon : place.icon
                         }));
                     });
 

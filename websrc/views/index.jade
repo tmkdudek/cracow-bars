@@ -1,7 +1,29 @@
 html
   head
+    meta(name='viewport', content='"width=device-width, initial-scale=1')
     title= title
+    link(rel='stylesheet', href='/public/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='/public/css/bootstrap.min.css')
   body
-    ul
-        each val in bars
-            li= val.name
+    h1 Lista barów wokół Rynku Głównego
+    div(class='table-responsive')
+        table(class='table table-stripped')
+            thead
+                tr
+                    th(class='hidden-xs hidden-sm')
+                    th Nazwa
+                    th(class='hidden-xs') Ocena
+                    th(class='hidden-xs hidden-sm') Typ
+                    th(class='hidden-xs') Mapa
+            each val in bars
+                tr
+                    td(class='hidden-xs hidden-sm')
+                        img(src=val.icon)
+                    td= val.name
+                    td(class='hidden-xs')= val.rating
+                    td(class='hidden-xs hidden-sm')
+                        each type in val.types
+                            span= type + ","
+                    td(class='hidden-xs')
+                        if val.photos[0].html_attributions
+                          !{val.photos[0].html_attributions[0]}
