@@ -7,6 +7,8 @@
     docker-compose build
     docker-compose up
 #Adresy
+## Testy
+    docker-compose run rest npm test
 ## Rest Api
     GET http://localhost:8080/bars
     GET http://localhost:8080/bar/ChIJy5YtdGpbFkcRj_mYfiaWIpI
