@@ -1,0 +1,17 @@
+rest:
+  build: .
+  dockerfile: ./docker/rest/Dockerfile
+  ports:
+      - "8080:8080"
+  volumes:
+      - ./src:/usr/src/app/src
+      - ./tests:/usr/src/app/tests
+web:
+  build: .
+  dockerfile: ./docker/web/Dockerfile
+  links:
+  - rest
+  ports:
+  - "9090:9090"
+  volumes:
+   - ./websrc:/usr/src/app/websrc
