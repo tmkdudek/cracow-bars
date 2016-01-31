@@ -19,11 +19,12 @@ html
                 tr
                     td(class='hidden-xs hidden-sm')
                         img(src=val.icon)
-                    td= val.name
+                    td
+                        a(href='/bar/'+val.id)= val.name
                     td(class='hidden-xs')= val.rating
                     td(class='hidden-xs hidden-sm')
                         each type in val.types
                             span= type + ","
                     td(class='hidden-xs')
                         if val.photos[0].html_attributions
-                          !{val.photos[0].html_attributions[0]}
+                            !{val.photos[0].html_attributions[0]}
